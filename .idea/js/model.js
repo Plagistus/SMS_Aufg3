@@ -27,35 +27,6 @@ function TipModel() {
             if (code.value.indexOf("." === -1)) return true;
             return false;
     }
-/*
-//Falsche eingaben
-    try{
-        if (code.value.indexOf("." === -1)) return true;
-        return false;
-        if (isNaN(betrag)) {
-            throw "Bitte geben Sie eine Zahl an";
-        }
-        if (isNaN(prozent)) {
-            throw "Bitte geben Sie eine Zahl an";
-        }
-        if (isNaN(pers))
-            throw "Bitte geben Sie eine Zahl an";
-
-        if (betrag < 0) {
-            throw "Keine negativen Zahlen";
-        }
-        if (prozent < 0) {
-            throw "Keine negativen Zahlen";
-        }
-        if (pers < 0) {
-            throw "Keine negativen Zahlen";
-        }
-    }
-//Fehlerausgabe
-    catch (err){
-        message.innerHTML =err;
-    }
- */
 
 //Berechnung des Trinkgelds
     var trinkgeld = (betrag * (prozent / 100)),
