@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Trinkgeldrechner</title>
+    <style>
+        h1 {
+            font-family: verdana;
+        }
+        p {
+            font-family: verdana;
+        }
+        input {
+            font-family: verdana;
+            border-radius: 4px;
+            padding: 10px 15px;
+        }
+        button {
+            font-family: verdana;
+            background-color: #008CBA; /* Green */
+            border: none;
+            color: white;
+            border-radius: 4px;
+            padding: 10px 15px;
+        }
+        fieldset {
+            border-radius: 4px;
+            border-style: 4px;
+        }
+    </style>
+</head>
+<meta charset="UTF-8">
+<body>
+<script src="js/model.js"></script>
+<script src="js/validation.js"></script>
+<h1>Trinkgeldrechner</h1>
+<main>
+    <fieldset style="width:0px">
+        <p id="p01"></p><br>
+
+        <input type="number" min = "0" id="betrag" step="0.01" placeholder="Rechnungsbetrag" oninput="validate(this)" required><br><br>
+
+        <input type="number" min="1" id="prozent" placeholder="Trinkgeld (%)" oninput="validate(this)" required><br><br>
+
+        <input type="number" min="1" id="pers" placeholder="Anzahl Personen" oninput="validate(this)" required><br><br>
+
+        <button class="button" type="button" onclick="TipModel()">Zeige Trinkgeld</button><br>
+
+    </fieldset>
+
+    <p><span>Gesamtbetrag:</span><output id="betrag_output">0</output>€</p>
+
+    <p>Betrag je Person:<output id="summepro">0</output>€</p>
+
+    <p><span>Trinkgeld:</span><output id="trinkgeld">0</output>€</p>
+
+    <p><span>Trinkgeld je Person:</span><output id="trinkgeldpro">0</output>€</p>
+</main>
+
+
+</body>
+</html>
